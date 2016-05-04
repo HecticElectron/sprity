@@ -65,7 +65,7 @@ module.exports = {
       throw new Error('output dir missing');
     }
 
-    this.src(o)
+    module.exports.src(o)
       .on('error', handleCallbackError(cb))
       .pipe(vfs.dest(function (file) {
         return file.base;
